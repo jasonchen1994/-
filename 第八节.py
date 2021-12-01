@@ -67,10 +67,18 @@ f=[x+y for x in 'ABCED' for y in '12345']
 print(f)
 f = [x**2 for x in range(1,1000)]
 print(sys.getsizeof(f))
-print(f)"""
+print(f)
 import sys
 f = (x**2 for x in range(1,10))
 print(sys.getsizeof(f))
-print(f)
+print(f)"""
 
-
+def foo():
+    print ('hello')
+    while True:
+        res=yield 4
+        print ('res:',res)
+g=foo()
+print (next(g))
+print ('*'*20)
+print (next(g))
